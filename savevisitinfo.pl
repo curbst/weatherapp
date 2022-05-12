@@ -7,6 +7,9 @@ sub perllog {
     my $filename = './perl.log';
 
    open(FH, '>>', $filename) or die $!;
+   my $datestring = localtime();
+   print FH "$datestring:";
+
    my $item = "";
    foreach $item (@_) {
      print FH $item;

@@ -9,7 +9,7 @@ GET_LOCATION_URL="http://ip-api.com/json/$REMOTE_IP"
 
 WEATHER_CGI=weather #http://cs.sierracollege.edu:8080/weather
 ROOT_PATH=~/weatherapp/
-LOG_FILE=${ROOT_PATH}/log.txt
+LOG_FILE=${ROOT_PATH}/run.log
 WEATHER_FILES_PATH=${ROOT_PATH}/weather-files/
 WEATHER_DATA_PATH=${ROOT_PATH}/data/
 WEATHER_DATABASE_NAME="weather.db"
@@ -166,8 +166,9 @@ case "$url" in
 	filename="$ROOT_PATH/$url"
 	;;
 *${WEATHER_CGI})
-	//WEATHER_CGI=weather
-	type="SCRIPT" filename="$ROOT_PATH/${url}.sh"
+	#//WEATHER_CGI=weather
+	type="SCRIPT" 
+  filename="$ROOT_PATH/${url}.sh"
 	;;
 *)
 	func_error_exit 501 "Unknown request"
