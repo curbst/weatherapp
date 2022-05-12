@@ -1,4 +1,4 @@
- chmod +x http.sh funcs.sh
+ chmod +x http.sh funcs.sh parsejson2html.py savevisitinfo.pl
  
  
  we can modify the listening port number 8099 as line below
@@ -18,5 +18,8 @@
  
  github respository: 
  https://github.com/curbst/weatherapp.git
+ 
+ database file: data/weather.db
+ data file(json): weather-files/*.json
 
 
